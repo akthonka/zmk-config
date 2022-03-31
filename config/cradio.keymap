@@ -46,37 +46,37 @@
 
         // layer_test {
         //     bindings = <
-        //     &kp ATTENTION    &kp ATTENTION   &kp ATTENTION   &kp ATTENTION   &kp ATTENTION           &kp ATTENTION   &kp ATTENTION   &kp ATTENTION   &kp ATTENTION   &kp ATTENTION   
-        //     &kp ATTENTION    &kp ATTENTION   &kp ATTENTION   &kp ATTENTION   &kp ATTENTION           &kp ATTENTION   &kp ATTENTION   &kp ATTENTION   &kp ATTENTION   &kp ATTENTION 
-        //     &kp ATTENTION    &kp ATTENTION   &kp ATTENTION   &kp ATTENTION   &kp ATTENTION           &kp ATTENTION   &kp ATTENTION   &kp ATTENTION   &td ATTENTION   &kp ATTENTION
-        //                                                      &kp ATTENTION   &kp ATTENTION           &kp ATTENTION   &kp ATTENTION
+        //     &kp none    &kp none   &kp none   &kp none   &kp none           &kp none   &kp none   &kp none   &kp none   &kp none   
+        //     &kp none    &kp none   &kp none   &kp none   &kp none           &kp none   &kp none   &kp none   &kp none   &kp none 
+        //     &kp none    &kp none   &kp none   &kp none   &kp none           &kp none   &kp none   &kp none   &td none   &kp none
+        //                                       &kp none   &kp none           &kp none   &kp none
         //     >;
         // };
                 
         layer_zero {
             bindings = <
-            &kp Y       &kp C   &kp L       &kp M           &kp K 				        &kp Z       &kp F       &kp U                &td MINUS COMMA    &kp APOSTROPHE 
-            &kp I       &kp S   &hm LALT R  &hm LGUI T      &kp G 			       	    &kp P       &hm RGUI N  &hm RALT E           &kp A              &kp O
-            &kp Q       &kp V   &kp W       &kp D           &kp J				        &kp B       &kp H       &td UNDERSCORE SLASH &td EXCL DOT       &kp X
-                                            &sk LSHIFT      &to 1         		        &kp RCTRL   &kp SPACE
+            &kp Y       &kp C       &kp L       &kp M           &kp K 				        &kp Z           &kp F       &kp U                &td MINUS COMMA    &kp APOSTROPHE 
+            &hm I       &kp S       &hm LALT R  &hm LGUI T      &kp G 			       	    &kp P           &hm RGUI N  &hm RALT E           &kp A              &kp O
+            &kp Q       &kp V       &kp W       &kp D           &kp J				        &kp B           &kp H       &td UNDERSCORE SLASH &td EXCL DOT       &kp X
+                                                &kp LSHFT       &to 1         		        &kp SPACE       &kp RCTRL       
             >;
         };
 
         layer_one {
             bindings = <
-            &kp ESC          &kp AT_SIGN     &kp HASH        &kp DOLLAR     &kp PERCENT             &kp CARET       &kp AMPERSAND             &kp ASTERISK               &kp DEL             &kp BACKSPACE   
-            &kp TAB          &kp ATTENTION   &kp UP          &kp HOME       &kp END                 &kp DQT         &td LBKT LEFT_PARENTHESIS &td RBKT RIGHT_PARENTHESIS &td SEMICOLON COLON &kp ENTER 
-            &kp ATTENTION    &kp LEFT        &kp DOWN        &kp RIGHT      &kp ATTENTION           &kp ATTENTION   &td LT LEFT_BRACE         &td GT RIGHT_BRACE         &td ATTENTION       &kp ATTENTION
-                                                             &sk ATTENTION  &to 2                   &to 0           &kp ATTENTION
+            &kp ESC          &kp AT_SIGN     &kp HASH        &kp DOLLAR          &kp PERCENT             &kp CARET       &kp AMPERSAND             &kp ASTERISK               &kp DEL             &kp BACKSPACE   
+            &kp TAB          &kp none        &kp UP          &kp HOME            &kp END                 &kp DQT         &td LBKT LEFT_PARENTHESIS &td RBKT RIGHT_PARENTHESIS &td SEMICOLON COLON &kp ENTER 
+            &kp none         &kp LEFT        &kp DOWN        &kp RIGHT           &kp none                &kp none        &td LT LEFT_BRACE         &td GT RIGHT_BRACE         &td none            &kp none
+                                                             &td CAPSLOCK LSHIFT &to 2                   &to 0           &kp RCTRL
             >;
         };
 	
         layer_two {
             bindings = <
-            &kp ATTENTION    &kp ATTENTION   &kp ATTENTION   &kp ATTENTION   &kp ATTENTION           &kp EQUAL       &kp N7          &kp N8          &kp N9          &kp BACKSPACE   
-            &kp ATTENTION    &kp ATTENTION   &kp ATTENTION   &kp ATTENTION   &kp ATTENTION           &td PLUS MINUS  &kp N4          &kp N5          &kp N6          &kp ENTER 
-            &kp ATTENTION    &kp ATTENTION   &kp ATTENTION   &kp ATTENTION   &kp ATTENTION           &kp DOT         &kp N1          &kp N2          &kp N3          &kp ATTENTION
-                                                             &kp ATTENTION   &kp ATTENTION           &to 0           &kp N0
+            &kp none    &kp none   &kp none   &kp none   &kp none           &kp EQUAL       &kp N7          &kp N8          &kp N9          &kp BACKSPACE   
+            &kp none    &kp none   &kp none   &kp none   &kp none           &td PLUS MINUS  &kp N4          &kp N5          &kp N6          &kp ENTER 
+            &kp none    &kp none   &kp none   &kp none   &kp none           &kp DOT         &kp N1          &kp N2          &kp N3          &kp none
+                                              &kp none   &kp none           &to 0           &kp N0
             >;
         };
         
