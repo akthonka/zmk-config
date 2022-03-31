@@ -66,7 +66,7 @@
             bindings = <
             &kp ESC          &kp AT_SIGN     &kp HASH        &kp DOLLAR          &kp PERCENT                &kp CARET       &kp AMPERSAND             &kp ASTERISK               &kp DEL             &kp BACKSPACE   
             &kp TAB          &kp TILDE       &kp UP          &kp HOME            &kp END                    &kp DQT         &td LBKT LEFT_PARENTHESIS &td RBKT RIGHT_PARENTHESIS &td SEMICOLON COLON &kp ENTER 
-            &kp TILDE        &kp LEFT        &kp DOWN        &kp RIGHT           &kp TILDE                  &kp TILDE       &td LT LEFT_BRACE         &td GT RIGHT_BRACE         &td none            &kp TILDE
+            &kp TILDE        &kp LEFT        &kp DOWN        &kp RIGHT           &kp TILDE                  &kp TILDE       &td LT LEFT_BRACE         &td GT RIGHT_BRACE         &kp TILDE           &kp TILDE
                                                              &td CAPSLOCK LSHIFT &to 2                      &to 0           &kp RCTRL
             >;
         };
@@ -76,7 +76,7 @@
         //     &kp TILDE    &kp TILDE   &kp TILDE   &kp TILDE   &kp TILDE                       &kp EQUAL       &kp N7          &kp N8          &kp N9          &kp BACKSPACE   
         //     &kp TILDE    &kp TILDE   &kp TILDE   &kp TILDE   &kp TILDE                       &td PLUS MINUS  &kp N4          &kp N5          &kp N6          &kp ENTER 
         //     &kp TILDE    &kp TILDE   &kp TILDE   &kp TILDE   &kp TILDE                       &kp DOT         &kp N1          &kp N2          &kp N3          &kp TILDE
-        //                              &kp TILDE   &kp TILDE                       &to 0           &kp N0
+        //                              &kp TILDE   &kp TILDE                                   &to 0           &kp N0
         //     >;
         // };
         
