@@ -4,10 +4,17 @@
  * SPDX-License-Identifier: MIT
  */
 
+// ZMK defines
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+
+// Layer defines
+#define DEFAULT 0
+#define SYMBOLS 1
+#define NUMBERS 2
+#define SPECIALS 3
 
 
 &mt {
@@ -39,8 +46,17 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        tilesc: tilde_escape {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TILDE_ESC";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
+    
     keymap {
         compatible = "zmk,keymap";
 
@@ -53,30 +69,39 @@
         //     >;
         // };
                 
-        layer_zero {
+        default_layer {
             bindings = <
-            &kp Y       &kp C       &kp L       &kp M           &kp K 				                &kp Z           &kp F       &kp U                &td MINUS COMMA    &kp APOSTROPHE 
+            &kp Y       &kp C       &kp L       &kp M           &kp K 				                &kp Z           &kp F       &kp U                &kp COMMA          &td GRAVE APOSTROPHE 
             &kp I       &kp S       &hm LALT R  &hm LGUI T      &kp G 			       	            &kp P           &hm RGUI N  &hm RALT E           &kp A              &kp O
-            &kp Q       &kp V       &kp W       &kp D           &kp J				                &kp B           &kp H       &td UNDERSCORE SLASH &td EXCL DOT       &kp X
-                                                &kp LSHFT       &to 1         		                &kp SPACE       &kp RCTRL       
+            &kp Q       &kp V       &kp W       &kp D           &kp J				                &kp B           &kp H       &td UNDER FSLH       &td EXCL DOT       &kp X
+                                                &kp LSHFT       &to SYMBOLS         		        &kp SPACE       &kp RCTRL       
             >;
         };
 
-        layer_one {
+        symbols_layer {
             bindings = <
-            &kp ESC          &kp AT_SIGN     &kp HASH        &kp DOLLAR          &kp PERCENT                &kp CARET       &kp AMPERSAND             &kp ASTERISK               &kp DEL             &kp BACKSPACE   
-            &kp TAB          &none           &kp UP          &kp HOME            &kp END                    &kp DQT         &td LBKT LEFT_PARENTHESIS &td RBKT RIGHT_PARENTHESIS &td SEMICOLON COLON &kp ENTER 
-            &none            &kp LEFT        &kp DOWN        &kp RIGHT           &none                      &none           &td LT LEFT_BRACE         &td GT RIGHT_BRACE         &none               &none
-                                                             &td CAPSLOCK LSHIFT &to 2                      &to 0           &kp RCTRL
+            &tilesc   &kp AT_SIGN  &kp HASH   &kp DOLLAR          &kp PERCENT                    &kp CARET       &kp AMPERSAND             &kp ASTERISK               &kp DEL             &kp BACKSPACE   
+            &kp TAB   &kp INSERT   &kp UP     &kp HOME            &kp END                        &kp MINUS       &td LBKT LEFT_PARENTHESIS &td RBKT RIGHT_PARENTHESIS &td SEMICOLON COLON &kp ENTER 
+            &none     &kp LEFT     &kp DOWN   &kp RIGHT           &to SPECIALS                   &kp DQT         &td LT LEFT_BRACE         &td GT RIGHT_BRACE         &td PIPE BSLH       &kp QUESTION 
+                                              &td CAPSLOCK LSHIFT &to NUMBERS                    &to DEFAULT     &kp RCTRL
             >;
         };
 	
-        layer_two {
+        numbers_layer {
             bindings = <
-            &none    &none   &none   &none   &none                       &kp EQUAL       &kp N7          &kp N8          &kp N9          &kp BACKSPACE   
-            &none    &none   &none   &none   &none                       &td PLUS MINUS  &kp N4          &kp N5          &kp N6          &kp ENTER 
-            &none    &none   &none   &none   &none                       &kp DOT         &kp N1          &kp N2          &kp N3          &none
-                                     &none   &none                       &to 0           &kp N0
+            &none   &none   &none   &none   &none                       &kp EQUAL       &td F7 N7          &td F8 N8          &td F8 N9          &td F11 BACKSPACE   
+            &none   &none   &none   &none   &none                       &td PLUS MINUS  &td F4 N4          &td F5 N5          &td F6 N6          &td F12 ENTER 
+            &none   &none   &none   &none   &none                       &td COMMA DOT   &td F1 N1          &td F2 N2          &td F3 N3          &none
+                                    &none   &none                       &to DEFAULT     &td F10 N0
+            >;
+        };
+
+        special_layer {
+            bindings = <
+            &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4            &none         &kp C_BRI_UP   &kp C_BRI_DN      &none      &none   
+            &bt BT_CLR      &bt BT_PRV    &bt BT_NXT     &out OUT_BLE   &out OUT_USB            &none         &kp C_VOL_UP   &kp C_VOLUME_DOWN &kp C_MUTE &none 
+            &none           &none         &none          &none          &none                   &none         &none          &none             &none      &none
+                                                         &none          &none                   &to DEFAULT   &none
             >;
         };
         
