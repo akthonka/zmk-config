@@ -53,49 +53,40 @@
     
     keymap {
         compatible = "zmk,keymap";
-
-        // layer_test {
-        //     bindings = <
-        //     &none    &none   &none   &none   &none           &none   &none   &none   &none   &none   
-        //     &none    &none   &none   &none   &none           &none   &none   &none   &none   &none 
-        //     &none    &none   &none   &none   &none           &none   &none   &none   &none   &none
-        //                              &none   &none           &none   &none
-        //     >;
-        // };
                 
         default_layer {
             bindings = <
-            &kp Y       &kp C       &kp L       &kp M           &kp K 				                &kp Z           &kp F       &kp U                &kp COMMA          &td GRAVE APOSTROPHE 
-            &kp I       &kp S       &hm LALT R  &hm LGUI T      &kp G 			       	            &kp P           &hm RGUI N  &hm RALT E           &kp A              &kp O
-            &kp Q       &kp V       &kp W       &kp D           &kp J				                &kp B           &kp H       &td UNDER FSLH       &td EXCL DOT       &kp X
-                                                &kp LSHFT       &to SYMBOLS         		        &kp SPACE       &kp RCTRL       
+            &kp Y       &kp C       &kp L       &kp M           &kp K                               &kp Z           &kp F           &kp U           &kp COMMA       &td GRAVE APOSTROPHE 
+            &kp I       &kp S       &hm LALT R  &hm LGUI T      &kp G 			       	            &kp P           &hm RGUI N      &hm RALT E      &kp A           &kp O
+            &kp Q       &kp V       &kp W       &kp D           &kp J				                &kp B           &kp H           &td UNDER FSLH  &td EXCL DOT    &kp X
+                                                &kp LSHFT       &to SYMBOLS                         &kp SPACE       &kp RCTRL
             >;
         };
 
         symbols_layer {
             bindings = <
-            &tilesc   &kp AT_SIGN  &kp HASH   &kp DOLLAR          &kp PERCENT                    &kp CARET       &kp AMPERSAND             &kp ASTERISK               &kp DEL             &kp BACKSPACE   
-            &kp TAB   &kp INSERT   &kp UP     &kp HOME            &kp END                        &kp MINUS       &td LBKT LEFT_PARENTHESIS &td RBKT RIGHT_PARENTHESIS &td SEMICOLON COLON &kp ENTER 
-            &none     &kp LEFT     &kp DOWN   &kp RIGHT           &to SPECIALS                   &kp DQT         &td LT LEFT_BRACE         &td GT RIGHT_BRACE         &td PIPE BSLH       &kp QUESTION 
-                                              &td CAPSLOCK LSHIFT &to NUMBERS                    &to DEFAULT     &kp RCTRL
+            &tilesc     &kp AT_SIGN &kp HASH    &kp DOLLAR      &kp PERCENT                         &kp CARET       &kp AMPERSAND   &kp ASTERISK    &kp DEL         &kp BACKSPACE   
+            &kp TAB     &kp INSERT  &kp UP      &kp HOME        &kp END                             &kp MINUS       &td LBKT LPAR   &td RBKT RPAR   &td SEMI COLON  &kp ENTER 
+            &kp PSCRN   &kp LEFT    &kp DOWN    &kp RIGHT       &to SPECIALS                        &kp DQT         &td LT LBRC     &td GT RBRC     &td PIPE BSLH   &kp QUESTION 
+                                                &td CAPS LSHIFT &to NUMBERS                         &to DEFAULT     &kp RCTRL
             >;
         };
 	
         numbers_layer {
             bindings = <
-            &none   &none   &none   &none   &none                       &kp EQUAL       &td F7 N7          &td F8 N8          &td F8 N9          &td F11 BACKSPACE   
-            &none   &none   &none   &none   &none                       &td PLUS MINUS  &td F4 N4          &td F5 N5          &td F6 N6          &td F12 ENTER 
-            &none   &none   &none   &none   &none                       &td COMMA DOT   &td F1 N1          &td F2 N2          &td F3 N3          &none
-                                    &none   &none                       &to DEFAULT     &td F10 N0
+            &none   &none   &none   &none   &none                                                   &kp EQUAL       &td F7 N7       &td F8 N8       &td F8 N9       &td F11 BACKSPACE   
+            &none   &none   &none   &none   &none                                                   &td PLUS MINUS  &td F4 N4       &td F5 N5       &td F6 N6       &td F12 ENTER 
+            &none   &none   &none   &none   &none                                                   &td COMMA DOT   &td F1 N1       &td F2 N2       &td F3 N3       &none
+                                    &none   &none                                                   &to DEFAULT     &td F10 N0
             >;
         };
 
         special_layer {
             bindings = <
-            &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4            &none         &kp C_BRI_UP   &kp C_BRI_DN      &none      &none   
-            &bt BT_CLR      &bt BT_PRV    &bt BT_NXT     &out OUT_BLE   &out OUT_USB            &none         &kp C_VOL_UP   &kp C_VOLUME_DOWN &kp C_MUTE &none 
-            &none           &none         &none          &none          &none                   &none         &none          &none             &none      &none
-                                                         &none          &none                   &to DEFAULT   &none
+            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &none           &kp C_BRI_UP   &kp C_BRI_DN      &none          &none   
+            &bt BT_CLR   &bt BT_PRV   &bt BT_NXT    &out OUT_BLE  &out OUT_USB                      &none           &kp C_VOL_UP   &kp C_VOLUME_DOWN &kp C_MUTE     &none 
+            &none        &none        &none         &none         &none                             &none           &none          &none             &none          &none
+                                                    &none         &none                             &to DEFAULT     &none
             >;
         };
         
