@@ -62,14 +62,14 @@
             >;
         };
 
-        // layer_one {
-        //     bindings = <
-        //     &kp ESC          &kp AT_SIGN     &kp HASH        &kp DOLLAR          &kp PERCENT                &kp CARET       &kp AMPERSAND             &kp ASTERISK               &kp DEL             &kp BACKSPACE   
-        //     &kp TAB          &kp none        &kp UP          &kp HOME            &kp END                    &kp DQT         &td LBKT LEFT_PARENTHESIS &td RBKT RIGHT_PARENTHESIS &td SEMICOLON COLON &kp ENTER 
-        //     &kp none         &kp LEFT        &kp DOWN        &kp RIGHT           &kp none                   &kp none        &td LT LEFT_BRACE         &td GT RIGHT_BRACE         &td none            &kp none
-        //                                                      &td CAPSLOCK LSHIFT &to 2                      &to 0           &kp RCTRL
-        //     >;
-        // };
+        layer_one {
+            bindings = <
+            &kp ESC          &kp AT_SIGN     &kp HASH        &kp DOLLAR          &kp PERCENT                &kp CARET       &kp AMPERSAND             &kp ASTERISK               &kp DEL             &kp BACKSPACE   
+            &kp TAB          &kp none        &kp UP          &kp HOME            &kp END                    &kp DQT         &td LBKT LEFT_PARENTHESIS &td RBKT RIGHT_PARENTHESIS &td SEMICOLON COLON &kp ENTER 
+            &kp none         &kp LEFT        &kp DOWN        &kp RIGHT           &kp none                   &kp none        &td LT LEFT_BRACE         &td GT RIGHT_BRACE         &td none            &kp none
+                                                             &td CAPSLOCK LSHIFT &to 2                      &to 0           &kp RCTRL
+            >;
+        };
 	
         // layer_two {
         //     bindings = <
