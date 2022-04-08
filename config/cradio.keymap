@@ -59,7 +59,7 @@
             &kp Y       &kp C       &kp L       &kp M           &kp K                               &kp Z           &kp F           &kp U           &kp COMMA       &td GRAVE APOSTROPHE 
             &kp I       &kp S       &hm LALT R  &hm LGUI T      &kp G 			       	            &kp P           &hm RGUI N      &hm RALT E      &kp A           &kp O
             &kp Q       &kp V       &kp W       &kp D           &kp J				                &kp B           &kp H           &td UNDER FSLH  &td EXCL DOT    &kp X
-                                                &kp LSHFT       &to SYMBOLS                         &kp SPACE       &kp RCTRL
+                                                &bt BT_SEL 0    &bt BT_CLR                          &kp SPACE       &kp RCTRL
             >;
         };
 
